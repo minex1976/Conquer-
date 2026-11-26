@@ -5,7 +5,7 @@ const crypto=require("crypto");
 const path=require("path");
 const app=express();const server=http.createServer(app);const wss=new WebSocket.Server({server});
 const PORT=process.env.PORT||3000;
-app.use(express.static(path.join(__dirname,"../client")));
+app.use(express.static(path.join(__dirname,"../Client")));
 app.get("/health",(req,res)=>res.json({ok:true,service:"winzo-conquer",mode:"free-play"}));
 const rooms=new Map(), sockets=new Map();
 const SUITS=["♠","♥","♦","♣"], RANKS=["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
