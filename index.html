@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WINZO CONQUER</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="brand">WINZO <span>CONQUER</span></div><div id="connection">Connecting…</div></header>
+  <main>
+    <section id="lobby" class="panel">
+      <h1>Conquer Card Table</h1><p class="muted">Traditional green-table multiplayer · Free-play prototype</p>
+      <div class="row"><input id="playerName" maxlength="18" placeholder="Your player name"><button id="createBtn">Create private room</button></div>
+      <div class="row"><input id="roomCode" maxlength="6" placeholder="Room code"><button id="joinBtn" class="secondary">Join room</button></div>
+      <p id="lobbyMessage" class="message"></p>
+      <p class="small">A room supports up to five players. Share its code with friends.</p>
+    </section>
+
+    <section id="game" hidden>
+      <div class="game-top"><div><strong>Room <span id="roomLabel">------</span></strong><button id="copyInvite" class="tiny">Copy invite link</button></div><div id="turnLabel">Waiting for players…</div></div>
+      <div class="table">
+        <div class="players" id="players"></div>
+        <div class="center-piles">
+          <div class="pile"><div class="pile-card back">WINZO</div><span>Draw pile</span><b id="deckCount">0</b></div>
+          <div class="pile"><div id="discardTop" class="pile-card empty">—</div><span>Discard pile</span><b id="discardCount">0</b></div>
+        </div>
+        <div class="table-hint" id="tableHint">Waiting for five players to join.</div>
+      </div>
+      <div class="controls">
+        <button id="drawBtn">Draw card</button><button id="discardBtn" class="secondary" disabled>Discard selected</button>
+        <button id="startBtn" class="outline">Start game (host)</button>
+      </div>
+      <section class="hand-panel"><div class="hand-title"><h2>Your cards</h2><span id="handCount">0 cards</span></div><div id="hand" class="hand"></div></section>
+      <p id="gameMessage" class="message"></p>
+    </section>
+  </main>
+  <footer>WINZO CONQUER · Prototype 0.1 · Free-play only</footer>
+  <script src="app.js"></script>
+</body></html>
