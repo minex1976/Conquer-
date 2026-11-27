@@ -39,7 +39,7 @@
       <div class="table">
         <div class="players" id="players"></div>
         <div class="center-piles">
-          <div class="pile"><div class="pile-card back">WINZO</div><span>Draw pile</span><b id="deckCount">0</b></div>
+          <div class="pile"><div id="drawPile" class="pile-card back">WINZO</div><span>Draw pile</span><b id="deckCount">0</b></div>
           <div class="pile"><div id="discardTop" class="pile-card empty">—</div><span>Discard pile</span><b id="discardCount">0</b></div>
         </div>
         <div class="table-hint" id="tableHint">Waiting for another player to join.</div>
@@ -48,7 +48,12 @@
         <button id="drawBtn">Draw card</button><button id="discardBtn" class="secondary" disabled>Discard selected</button>
         <button id="startBtn" class="outline">Start game (host)</button>
       </div>
-      <section class="hand-panel"><div class="hand-title"><h2>Your cards</h2><span id="handCount">0 cards</span></div><div id="hand" class="hand"></div></section>
+      <section class="hand-panel">
+        <div class="hand-title"><h2>Your cards</h2><span id="handCount">0 cards</span></div>
+        <p class="hand-help">Drag cards to rearrange them, or select a card and use the arrows.</p>
+        <div class="hand-tools"><button id="moveLeftBtn" class="outline move-card" disabled aria-label="Move selected card left">← Move left</button><button id="moveRightBtn" class="outline move-card" disabled aria-label="Move selected card right">Move right →</button></div>
+        <div id="hand" class="hand"></div>
+      </section>
       <p id="gameMessage" class="message"></p>
       <button id="backBtn" class="outline back-button">Back to lobby</button>
     </section>
